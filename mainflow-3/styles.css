@@ -1,0 +1,264 @@
+/* Global Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background-color: #e0f7fa;  /* Light green-blue color */
+    color: #333;
+    line-height: 1.6;
+    background-image: url('assets/background.jpg'); /* Path to nature background image */
+    background-size: cover;
+    background-position: center center;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+  }
+  
+  /* Header */
+  .header {
+    background-color: rgba(34, 139, 34, 0.85);  /* Forest green background with some transparency */
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+  }
+  
+  .header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+  }
+  
+  .header p {
+    font-size: 1.2em;
+    margin-top: 0;
+  }
+  
+  /* Navbar */
+  .navbar {
+    background-color: #2e8b57;  /* Sea green color */
+    text-align: center;
+    padding: 10px 0;
+  }
+  
+  .navbar ul {
+    list-style-type: none;
+  }
+  
+  .navbar li {
+    display: inline;
+    margin: 0 15px;
+  }
+  
+  .navbar a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1em;
+  }
+  
+  .navbar a:hover {
+    background-color: #ddd;
+    color: #2e8b57;  /* Match the navbar hover color with the primary green */
+    padding: 5px 10px;
+    border-radius: 5px;
+  }
+  
+  /* Main Nature Section */
+  .nature {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .nature-item {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    padding: 15px;
+  }
+  
+  .nature-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+  }
+  
+  .nature-item img {
+    border-radius: 8px;
+    max-width: 100%;
+    height: auto;
+  }
+  
+  .nature-item h2 {
+    font-size: 1.5em;
+    margin: 15px 0;
+  }
+  
+  .nature-item p {
+    color: #7a6868;
+    font-size: 1.1em;
+  }
+  
+  .nature-item button {
+    background-color: #3cb371;  /* Green button */
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    margin-top: 10px;
+    width: 100%;
+  }
+  
+  .nature-item button:hover {
+    background-color: #2e8b57;  /* Darker green on hover */
+  }
+  
+  /* Footer */
+  .footer {
+    background-color: #2f4f4f;  /* Dark green-gray footer */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    margin-top: 30px;
+  }
+  
+  /* Media Queries */
+  
+  /* For tablets (portrait) */
+  @media screen and (max-width: 768px) {
+    .header h1 {
+      font-size: 2em;
+    }
+  
+    .header p {
+      font-size: 1.1em;
+    }
+  
+    .navbar a {
+      font-size: 1em;
+    }
+  
+    .nature {
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); /* Adjust columns for smaller screens */
+    }
+  
+    .nature-item h2 {
+      font-size: 1.3em;
+    }
+  
+    .nature-item p {
+      font-size: 1em;
+    }
+  
+    .nature-item button {
+      font-size: 1em;
+    }
+  }
+  
+  /* For mobile devices (portrait) */
+  @media screen and (max-width: 480px) {
+    .header h1 {
+      font-size: 1.8em;
+    }
+  
+    .header p {
+      font-size: 1em;
+    }
+  
+    .navbar {
+      padding: 8px 0;
+    }
+  
+    .navbar li {
+      display: block;
+      margin: 5px 0;
+    }
+  
+    .navbar a {
+      font-size: 1em;
+      padding: 5px;
+    }
+  
+    .nature {
+      grid-template-columns: 1fr; /* Stack items in one column */
+    }
+  
+    .nature-item h2 {
+      font-size: 1.2em;
+    }
+  
+    .nature-item p {
+      font-size: 0.9em;
+    }
+  
+    .nature-item button {
+      font-size: 1em;
+    }
+  }
+  
+  /* For larger screens (desktops) */
+  @media screen and (min-width: 1200px) {
+    .header h1 {
+      font-size: 3em;
+    }
+  
+    .navbar a {
+      font-size: 1.2em;
+    }
+  
+    .nature {
+      grid-template-columns: repeat(4, 1fr); /* Show 4 columns for large screens */
+    }
+  
+    .nature-item h2 {
+      font-size: 1.8em;
+    }
+  
+    .nature-item p {
+      font-size: 1.2em;
+    }
+  
+    .nature-item button {
+      font-size: 1.2em;
+    }
+  }
+  
+.contact {
+  background-color: #f9f9f9;
+  padding: 20px;
+  text-align: center;
+}
+
+.contact form {
+  max-width: 400px;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.contact form input, 
+.contact form textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+}
+
+.contact form button {
+  background-color: #0056b3;
+  color: white;
+  border: none;
+  padding: 10px;
+  cursor: pointer;
+}
+
+.contact form button:hover {
+  background-color: #003d80;
+}
+  
